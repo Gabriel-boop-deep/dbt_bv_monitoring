@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_colaboradores
+    description: Este modelo organiza os dados dos colaboradores da instituição.
+    columns:
+      - name: colaborador_id
+        description: Código único do colaborador.
+        tests:
+          - not_null
+          - unique
+      - name: colaborador_nome
+        description: Nome do colaborador.
+      - name: colaborador_sobrenome
+        description: Sobrenome do colaborador.
+      - name: colaborador_email
+        description: Email do colaborador.
+      - name: colaborador_cpf
+        description: CPF do colaborador.
+      - name: data_nascimento
+        description: Data de nascimento do colaborador.
+      - name: colaborador_endereco
+        description: Endereço residencial do colaborador.
+      - name: colaborador_cep
+        description: CEP do endereço do colaborador.

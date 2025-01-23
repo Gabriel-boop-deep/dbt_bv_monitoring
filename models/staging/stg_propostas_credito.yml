@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_propostas_credito
+    description: Este modelo organiza os dados das propostas de crédito, incluindo status e condições.
+    columns:
+      - name: proposta_id
+        description: Código único da proposta de crédito.
+        tests:
+          - not_null
+          - unique
+      - name: cliente_id
+        description: Código do cliente que submeteu a proposta.
+        tests:
+          - not_null
+      - name: colaborador_id
+        description: Código do colaborador associado à proposta.
+      - name: data_entrada
+        description: Data em que a proposta foi submetida.
+      - name: taxa_juros_mensal
+        description: Taxa de juros mensal aplicada na proposta.
+      - name: valor_proposta
+        description: Valor total solicitado na proposta.
+      - name: valor_financiamento
+        description: Valor financiado na proposta.
+      - name: valor_entrada
+        description: Valor de entrada da proposta.
+      - name: valor_prestacao
+        description: Valor da prestação mensal.
+      - name: quantidade_parcelas
+        description: Número total de parcelas.
+      - name: carencia
+        description: Período de carência em meses.
+      - name: status_proposta
+        description: Status atual da proposta.

@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: banvic
+    database: sap-northwind-project
+    schema: dbt_gnogueira
+    tables:
+      - name: agencias
+      - name: clientes
+      - name: colaborador_agencia
+      - name: colaboradores
+      - name: contas
+      - name: propostas_credito
+      - name: transacoes

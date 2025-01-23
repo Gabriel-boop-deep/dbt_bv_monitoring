@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_contas
+    description: Este modelo organiza os dados das contas bancárias dos clientes.
+    columns:
+      - name: conta_id
+        description: Número único da conta.
+        tests:
+          - not_null
+          - unique
+      - name: cliente_id
+        description: Código do cliente associado à conta.
+        tests:
+          - not_null
+      - name: agencia_id
+        description: Código da agência onde a conta foi aberta.
+        tests:
+          - not_null
+      - name: colaborador_id
+        description: Código do colaborador responsável pela conta.
+      - name: tipo_conta
+        description: Tipo de conta 
+      - name: data_abertura
+        description: Data em que a conta foi aberta.
+      - name: saldo_total
+        description: Saldo total da conta.
+      - name: saldo_disponivel
+        description: Saldo disponível da conta.
+      - name: data_ultimo_lancamento
+        description: Data do último lançamento na conta.

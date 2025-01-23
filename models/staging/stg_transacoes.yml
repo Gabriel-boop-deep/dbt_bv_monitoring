@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_transacoes
+    description: Este modelo organiza os dados das transações realizadas nas contas bancárias.
+    columns:
+      - name: transacao_id
+        description: Código único da transação.
+        tests:
+          - not_null
+          - unique
+      - name: conta_id
+        description: Número da conta associada à transação.
+        tests:
+          - not_null
+      - name: data_transacao
+        description: Data e hora em que a transação foi realizada.
+      - name: nome_transacao
+        description: Nome ou descrição da transação.
+      - name: valor_transacao
+        description: Valor monetário da transação.

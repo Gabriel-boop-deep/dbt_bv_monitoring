@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_colaborador_agencia
+    description: Este modelo organiza a relação entre colaboradores e agências.
+    columns:
+      - name: colaborador_id
+        description: Código único do colaborador associado à agência.
+        tests:
+          - not_null
+          - unique
+      - name: agencia_id
+        description: Código único da agência associada ao colaborador.
+        tests:
+          - not_null

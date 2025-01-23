@@ -29,8 +29,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
+
 models:
-  dbt_northwind_project:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+  dbt_bv_monitoring: # <-- Name of the project. If you renamed your project you have to change this as well
+    
+    # Applies to all files under models/example/
+    staging:
+      schema: bv_staging
+      materialized: table
+    marts:
+      schema: bv_marts
+      materialized: table

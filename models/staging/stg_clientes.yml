@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_clientes
+    description: |
+      Este modelo organiza e padroniza os dados dos clientes, separando informações pessoais e comerciais.
+    columns:
+      - name: cliente_id
+        description: Código único do cliente.
+        tests:
+          - not_null
+          - unique
+      - name: cliente_primeiro_nome
+        description: Primeiro nome do cliente.
+      - name: cliente_ultimo_nome
+        description: Último nome do cliente.
+      - name: cliente_email
+        description: E-mail do cliente.
+      - name: tipo_cliente
+        description: Tipo de cliente
+      - name: data_inclusao
+        description: Data em que o cliente foi cadastrado no sistema.
+      - name: cliente_cpf_cnpj
+        description: CPF ou CNPJ do cliente.
+      - name: cliente_data_nascimento
+        description: Data de nascimento do cliente.
+      - name: cliente_endereco
+        description: Endereço completo do cliente.
+      - name: cliente_cep
+        description: CEP do cliente.
