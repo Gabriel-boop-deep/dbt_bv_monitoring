@@ -40,3 +40,7 @@ models:
     marts:
       schema: bv_marts
       materialized: table
+
+seeds:
+  dbt_bv_monitoring: # <-- Name of the project. If you renamed your project you have to change this as well  
+    +schema: sap_bv
