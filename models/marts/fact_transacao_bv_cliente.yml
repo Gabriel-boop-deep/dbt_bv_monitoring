@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: fato_transacao_bv_cliente
+    description: "Tabela fato que armazena registros de transações financeiras realizadas pelos clientes."
+    columns:
+      - name: financeiro_sk
+        description: "Chave substituta (Surrogate Key) para identificar exclusivamente cada registro financeiro."
+        tests:
+          - not_null
+          - unique
+
+      - name: transacao_fk
+        description: "Chave estrangeira para a dimensão de transações."
+        tests:
+          - not_null
+
+      - name: data_fk
+        description: "Chave estrangeira para a dimensão de datas."
+        tests:
+          - not_null
+
+      - name: cliente_id
+        description: "Identificador do cliente associado à transação."
+        tests:
+          - not_null
+
+      - name: data_transacao
+        description: "Data em que a transação foi realizada."
+
+      - name: valor_transacao
+        description: "Valor monetário da transação."

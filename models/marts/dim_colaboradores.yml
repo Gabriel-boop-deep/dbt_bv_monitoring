@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dim_colaboradores
+    description: "Tabela de dimensão para colaboradores, contendo informações detalhadas sobre cada colaborador e sua relação com agências."
+    columns:
+      - name: colaborador_sk
+        description: "Chave substituta única para identificar um colaborador."
+        tests:
+          - not_null
+          - unique
+
+      - name: colaborador_id
+        description: "Identificador natural do colaborador no sistema de origem."
+        tests:
+          - not_null
+
+      - name: agencia_id
+        description: "Identificador natural da agência associada ao colaborador."
+        tests:
+          - not_null
+
+      - name: agencia_nome
+        description: "Nome da agência onde o colaborador está alocado."
+
+      - name: agencia_endereco
+        description: "Endereço da agência associada ao colaborador."
+
+      - name: agencia_cidade
+        description: "Cidade onde a agência está localizada."
+
+      - name: agencia_estado
+        description: "Estado onde a agência está localizada."
+
+      - name: data_abertura
+        description: "Data de abertura da agência."
+
+      - name: tipo_agencia
+        description: "Tipo da agência (ex.: matriz, filial)."
+
+      - name: colaborador_nome
+        description: "Primeiro nome do colaborador."
+
+      - name: colaborador_sobrenome
+        description: "Sobrenome do colaborador."
+
+      - name: colaborador_email
+        description: "Email do colaborador."

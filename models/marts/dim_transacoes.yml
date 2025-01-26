@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: dim_transacoes
+    description: "Tabela dimensão que armazena informações detalhadas sobre transações financeiras realizadas pelos clientes."
+    columns:
+      - name: transacao_sk
+        description: "Chave substituta (Surrogate Key) para identificar exclusivamente as transações."
+        tests:
+          - not_null
+          - unique
+
+      - name: transacao_id
+        description: "Identificador natural da transação no sistema de origem."
+        tests:
+          - not_null
+
+      - name: conta_id
+        description: "Identificador da conta associada à transação."
+        tests:
+          - not_null
+
+      - name: data_transacao
+        description: "Data em que a transação foi realizada."
+
+      - name: nome_transacao
+        description: "Descrição ou nome associado à transação."
+
+      - name: valor_transacao
+        description: "Valor monetário da transação realizada."
+
+      - name: cliente_primeiro_nome
+        description: "Primeiro nome do cliente associado à transação."
+
+      - name: tipo_cliente
+        description: "Tipo de cliente (e.g., pessoa física ou jurídica)."
+
+      - name: cliente_endereco
+        description: "Endereço do cliente associado à transação."

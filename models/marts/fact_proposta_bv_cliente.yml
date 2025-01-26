@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: fato_propostas_bv_cliente
+    description: "Tabela fato que registra informações financeiras relacionadas às propostas de crédito dos clientes."
+    columns:
+      - name: financeiro_sk
+        description: "Chave substituta (Surrogate Key) para identificar exclusivamente cada registro financeiro."
+        tests:
+          - not_null
+          - unique
+
+      - name: data_fk
+        description: "Chave estrangeira para a dimensão de datas."
+        tests:
+          - not_null
+
+      - name: colaborador_fk
+        description: "Chave estrangeira para a dimensão de colaboradores."
+        tests:
+          - not_null
+
+      - name: proposta_fk
+        description: "Chave estrangeira para a dimensão de propostas."
+        tests:
+          - not_null
+
+      - name: cliente_id
+        description: "Identificador do cliente associado à proposta."
+        tests:
+          - not_null
+
+      - name: taxa_juros_mensal
+        description: "Taxa de juros mensal aplicada à proposta."
+
+      - name: valor_proposta
+        description: "Valor total da proposta."
+
+      - name: valor_financiamento
+        description: "Valor financiado na proposta."
+
+      - name: valor_entrada
+        description: "Valor de entrada pago na proposta."
+
+      - name: valor_prestacao
+        description: "Valor de cada prestação."
+
+      - name: quantidade_parcelas
+        description: "Quantidade de parcelas para quitação da proposta."
+
+      - name: carencia
+        description: "Período de carência aplicado à proposta."
+
+      - name: status_proposta
+        description: "Status atual da proposta (e.g., aprovada, pendente, recusada)."

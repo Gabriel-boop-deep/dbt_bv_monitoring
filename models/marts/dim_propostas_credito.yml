@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: dim_propostas_credito
+    description: "Tabela dimensão que armazena informações detalhadas sobre propostas de crédito dos clientes."
+    columns:
+      - name: proposta_sk
+        description: "Chave substituta (Surrogate Key) para identificar exclusivamente as propostas de crédito."
+        tests:
+          - not_null
+          - unique
+
+      - name: proposta_id
+        description: "Identificador natural da proposta no sistema de origem."
+        tests:
+          - not_null
+
+      - name: cliente_id
+        description: "Identificador do cliente associado à proposta."
+        tests:
+          - not_null
+
+      - name: colaborador_id
+        description: "Identificador do colaborador responsável pela proposta."
+
+      - name: cliente_primeiro_nome
+        description: "Primeiro nome do cliente."
+
+      - name: tipo_cliente
+        description: "Tipo de cliente (e.g., pessoa física ou jurídica)."
+
+      - name: cliente_endereco
+        description: "Endereço do cliente."
+
+      - name: data_entrada
+        description: "Data de entrada da proposta."
+
+      - name: taxa_juros_mensal
+        description: "Taxa de juros mensal aplicada à proposta."
+
+      - name: valor_proposta
+        description: "Valor total da proposta."
+
+      - name: valor_financiamento
+        description: "Valor financiado na proposta."
+
+      - name: valor_entrada
+        description: "Valor de entrada pago na proposta."
+
+      - name: valor_prestacao
+        description: "Valor de cada prestação."
+
+      - name: quantidade_parcelas
+        description: "Quantidade de parcelas para quitação da proposta."
+
+      - name: carencia
+        description: "Período de carência aplicado à proposta."
+
+      - name: status_proposta
+        description: "Status atual da proposta (e.g., aprovada, pendente, recusada)."
