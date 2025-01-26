@@ -14,6 +14,7 @@ models:
         description: "Identificador natural do colaborador no sistema de origem."
         tests:
           - not_null
+          - unique
 
       - name: agencia_id
         description: "Identificador natural da agência associada ao colaborador."

@@ -14,6 +14,7 @@ models:
         description: "Identificador natural da proposta no sistema de origem."
         tests:
           - not_null
+          - unique
 
       - name: cliente_id
         description: "Identificador do cliente associado à proposta."
