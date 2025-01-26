@@ -16,7 +16,6 @@ with
         saldo_total, -- Saldo total da conta
         saldo_disponivel, -- Saldo disponível da conta
         data_ultimo_lancamento
-
         from stg_contas
     )
 
